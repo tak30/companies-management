@@ -40,9 +40,9 @@ Describe how to install all development dependencies and how to run an automated
 
 ## Meta
 
-Distributed under the XYZ license.
+Distributed under the MIT license.
 
-[https://github.com/tak30/companies-management](https://github.com/tak30/)
+[https://github.com/tak30](https://github.com/tak30)
 
 ## Contributing
 
