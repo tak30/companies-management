@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
 public class CompaniesServiceImpl implements CompaniesService {
@@ -18,6 +19,9 @@ public class CompaniesServiceImpl implements CompaniesService {
 
     @Override
     public void add(Company company) throws Exception {
+        if (company.getBeneficialOwners() == null) {
+            company.setBeneficialOwners(new CopyOnWriteArrayList<>());
+        }
         companiesRepository.add(company);
     }
 
@@ -46,7 +50,8 @@ public class CompaniesServiceImpl implements CompaniesService {
                     existingBeneficialOwners.add(beneficialOwner);
                 }
             }
+        } else {
+            throw new Exception("Company doesn't exists");
         }
-        throw new Exception("Company doesn't exists");
     }
 }

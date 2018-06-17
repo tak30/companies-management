@@ -1,15 +1,13 @@
 package io.github.tak30.companies.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
-@AllArgsConstructor
+@NoArgsConstructor
 @Getter
+@Setter
 @EqualsAndHashCode
 @ToString
-public class BeneficialOwner extends Entity<Long> {
+public class BeneficialOwner {
     private String name;
 }

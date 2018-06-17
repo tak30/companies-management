@@ -1,20 +1,29 @@
 package io.github.tak30.companies.model;
 
-import lombok.Builder;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
 
-@Builder
 @Getter
+@Setter
 @ToString
+@NoArgsConstructor
 public class Company extends Entity<Long> {
-    private final String name;
-    private final String address;
-    private final String city;
-    private final String country;
-    private final String email;
-    private final String phoneNumber;
-    private final List<BeneficialOwner> beneficialOwners;
+    @JsonProperty(required = true)
+    private String name;
+    @JsonProperty(required = true)
+    private String address;
+    @JsonProperty(required = true)
+    private String city;
+    @JsonProperty(required = true)
+    private String country;
+    private String email;
+    private String phoneNumber;
+    @JsonProperty(required = true)
+    private List<BeneficialOwner> beneficialOwners;
+
 }

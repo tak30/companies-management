@@ -1,13 +1,16 @@
 package io.github.tak30.companies.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Setter
+@EqualsAndHashCode
 public abstract class Entity<T> {
 
-    @EqualsAndHashCode.Include
-    private T id;
+    @JsonProperty(required = true)
+    protected T id;
 
 }
