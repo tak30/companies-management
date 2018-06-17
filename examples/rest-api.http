@@ -10,7 +10,7 @@ Accept: */*
 Content-Type: application/json; charset=UTF-8
 Cache-Control: no-cache
 
-{"id":1,"name":"Company1","address":"Lubinska 5","city":"Wroclaw","country":"Polska","phoneNumber":"600123123","beneficialOwners":[]}
+{"id":1,"name":"Company1","address":"Ul Jana Pawa","city":"Wroclaw","country":"Polska","phoneNumber":"600123123","beneficialOwners":[]}
 
 
 ###
@@ -74,7 +74,7 @@ Accept: */*
 Content-Type: application/json; charset=UTF-8
 Cache-Control: no-cache
 
-{"name":"Company2","address":"O Penedo N6","city":"A Coruna","country":"Spain","phoneNumber":"600123124"}
+{"name":"Company2","address":"Av Marina 5","city":"A Coruna","country":"Spain","phoneNumber":"600123124"}
 
 
 ###
