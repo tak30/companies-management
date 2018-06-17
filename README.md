@@ -1,42 +1,27 @@
 # Companies management service
 > Example of Spring MVC service
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+<https://warm-plateau-56435.herokuapp.com/companies>
 
-One to two paragraph statement about your product and what it does.
-
-![](header.png)
-
-## Installation
-
-OS X & Linux:
+## Running it locally
 
 ```
-```
-
-Windows:
-
-```
+mvn package
+java -jar target/dependency/webapp-runner.jar target/*.war
 ```
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+See examples folder
 
-## Development setup
+## Devlopment setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```
-
-```
+Install Java 8 and Maven.
 
 ## Release History
 
 * 0.0.1
-    * Work in progress
+    * First version with minor bugs
 
 ## Meta
 
@@ -52,9 +37,17 @@ Distributed under the MIT license.
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+## TODO
+1. Unit testing
+2. Integration testing
+3. Add delete operation
+4. Fix bugs regarding required attributes
+5. Fix bug: When executing a put with an empty list of BeneficialOwners the list get's overriden.
+
+
+## Future work
+1. Add authentication: I would suggest _hmac_ as this is a little service out of an organization. 
+If the service would be part of a big environment then I would suggest ussing _oAuth_ to delegate the authentication 
+to a trusted service.
+2. Make the service redundant: Implement a DB based repository, put a load balancer and deploy more instances.
+
