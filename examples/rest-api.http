@@ -1,0 +1,101 @@
+GET http://warm-plateau-56435.herokuapp.com/companies
+Accept: */*
+Cache-Control: no-cache
+
+
+###
+
+POST http://warm-plateau-56435.herokuapp.com/companies
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+{"id":1,"name":"Company1","address":"Lubinska 5","city":"Wroclaw","country":"Polska","phoneNumber":"600123123","beneficialOwners":[]}
+
+
+###
+
+POST http://warm-plateau-56435.herokuapp.com/companies
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+{"id":2,"name":"Company2","address":"Avenida de la Marina 6","city":"A Coruña","country":"España","phoneNumber":"600123124"}
+
+
+###
+
+POST http://warm-plateau-56435.herokuapp.com/companies/1/beneficialOwners
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+[{"name":"pepito"}]
+
+
+###
+
+POST http://warm-plateau-56435.herokuapp.com/companies/1/beneficialOwners
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+[{"name":"pablito"}]
+
+###
+
+POST http://warm-plateau-56435.herokuapp.com/companies/1/beneficialOwners
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+[{"name":"pablito"}]
+
+###
+
+POST http://warm-plateau-56435.herokuapp.com/companies/2/beneficialOwners
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+[{"name":"jose"}]
+
+###
+
+GET http://warm-plateau-56435.herokuapp.com/companies
+Accept: */*
+Cache-Control: no-cache
+
+
+###
+
+PUT http://warm-plateau-56435.herokuapp.com/companies/2
+Accept: */*
+Content-Type: application/json; charset=UTF-8
+Cache-Control: no-cache
+
+{"name":"Company2","address":"O Penedo N6","city":"A Coruna","country":"Spain","phoneNumber":"600123124"}
+
+
+###
+
+GET http://warm-plateau-56435.herokuapp.com/companies
+Accept: */*
+Cache-Control: no-cache
+
+
+###
+
+GET http://warm-plateau-56435.herokuapp.com/companies/1
+Accept: */*
+Cache-Control: no-cache
+
+
+###
+
+GET http://warm-plateau-56435.herokuapp.com/companies/2
+Accept: */*
+Cache-Control: no-cache
+
+
+###

@@ -12,9 +12,10 @@ java -jar target/dependency/webapp-runner.jar target/*.war
 
 ## Usage example
 
-See examples folder
+See examples folder. 
+Open http files with Idea.
 
-## Devlopment setup
+## Development setup
 
 Install Java 8 and Maven.
 
